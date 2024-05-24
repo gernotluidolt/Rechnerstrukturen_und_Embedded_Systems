@@ -14,55 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../AOC_2023/.idea/AOC_2023.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/.idea/KlausurvorbereitungMdSE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/CameraSensor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/CameraSensor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/LaserSensor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/LaserSensor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/Motor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/Motor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/Robot.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/Robot.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/RobotException.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/Sensor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/UltrasonicSensor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/UltrasonicSensor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KlausurvorbereitungMdSE/factory/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/character.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/character.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/hero.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/hero.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/item.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/item.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MdSE2/01/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Roboter/.idea/Roboter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Roboter/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Roboter/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/.idea/TemplateKlausur.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/car.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/car.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/carrental.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/carrental.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/exceptions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/ferarrif40.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/ferarrif40.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/fordfocus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/fordfocus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/smallbus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/smallbus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/vwbus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TemplateKlausur/vwbus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pins_eduardu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proto.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AOC_2023/day_03/03.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="init boilerplate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +30,7 @@
     </projectState>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -90,7 +42,7 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="5c2b12f8-0cf2-44e2-9d26-1cad4e735bb3" />
-        <option name="url" value="https://github.com/gernotluidolt/aoc_2023.git" />
+        <option name="url" value="https://github.com/gernotluidolt/eduArdu_boilerplate.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -183,8 +135,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716486744548</updated>
-      <workItem from="1716486745632" duration="10624000" />
+      <workItem from="1716486745632" duration="11088000" />
     </task>
+    <task id="LOCAL-00001" summary="init boilerplate">
+      <option name="closed" value="true" />
+      <created>1716555420005</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716555420005</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,5 +166,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="init boilerplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="init boilerplate" />
   </component>
 </project>
