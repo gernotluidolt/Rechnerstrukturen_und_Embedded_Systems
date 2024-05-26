@@ -4,7 +4,12 @@
 // Joystick pins
 #define PIN_JOYSTICK_X  A0
 #define PIN_JOYSTICK_Y  A1
-#define PIN_JOYSTICK_BUTTON 31
+#define PIN_JOYSTICK_BUTTON PE2
+/*  Für den Joystick Button:
+// Setze PE2 als Eingang
+DDRE &= ~(1 << DDE2);
+PORTE |= (1 << PORTE2);
+*/
 
 // LED Matrix pins
 // #include <Adafruit_NeoPixel.h>
@@ -53,4 +58,4 @@
 #define PIN_D16 MISO
 
 
-#endif PINS_EDUARDU_H
+#endif // PINS_EDUARDU_H

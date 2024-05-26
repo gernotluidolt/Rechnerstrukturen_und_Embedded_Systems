@@ -5,7 +5,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="eduArdu_boilerplate" targetName="PlatformIO" />
+      <config projectName="Rechnerstrukturen_und_Embedded_Systems" targetName="PlatformIO" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -15,13 +15,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="init boilerplate">
-      <change afterPath="$PROJECT_DIR$/examples/DiBSE/Helligkeitsensor-LED-AVR.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/DiBSE/Helligkeitsensor-LED-Arduino.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/DiBSE/PIR-LED-Example.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/DiBSE/RGB-LED-Example.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bitoperations.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Rechnerstrukturen_und_Embedded_Systems.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickHigh.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickHigh.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickLow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickLow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/dibse.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/dibse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/excercisesheet1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/excercisesheet1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_01/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pins_eduardu.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/pins_eduardu.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,14 +70,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="eduArdu_boilerplate" />
+              <option name="name" value="Rechnerstrukturen_und_Embedded_Systems" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="eduArdu_boilerplate" />
+                <option name="name" value="Rechnerstrukturen_und_Embedded_Systems" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
@@ -101,6 +108,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Makefile Target.ex_01.executor&quot;: &quot;Run&quot;,
     &quot;PlatformIO.PlatformIO.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -116,7 +124,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -125,28 +134,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/ex_01" />
       <recent name="$PROJECT_DIR$/examples/DiBSE" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile Target.Unnamed">
+  <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" nameIsGenerated="true">
-      <makefile filename="" target="" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rechnerstrukturen_und_Embedded_Systems" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
       <method v="2" />
     </configuration>
-    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="eduArdu_boilerplate" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Makefile Target.Unnamed" />
-      <item itemvalue="PlatformIO.PlatformIO" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -158,6 +159,14 @@
       <updated>1716486744548</updated>
       <workItem from="1716486745632" duration="11648000" />
       <workItem from="1716716272434" duration="6117000" />
+      <workItem from="1716730172868" duration="97000" />
+      <workItem from="1716730314910" duration="171000" />
+      <workItem from="1716730496221" duration="364000" />
+      <workItem from="1716731220085" duration="15000" />
+      <workItem from="1716731285834" duration="90000" />
+      <workItem from="1716732409281" duration="5628000" />
+      <workItem from="1716738338528" duration="644000" />
+      <workItem from="1716746532868" duration="8143000" />
     </task>
     <task id="LOCAL-00001" summary="init boilerplate">
       <option name="closed" value="true" />
