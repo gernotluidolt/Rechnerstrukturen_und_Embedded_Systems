@@ -1,7 +1,6 @@
 #include "dibse.h"
 #include "Arduino.h"
 
-#define LEDDURATION 500
 
 #define US_TX 8
 #define US_RX 4
@@ -27,33 +26,41 @@ void DibsE::setup() {
 void DibsE::loop() {
 
     updateDistance();
-    DisplayDistance();
+    SerialPrintDistance();
+    DistanceToMatrix();
 
-    unsigned long currentMillis = millis();
-    if (currentMillis - previousMillis >= LEDDURATION) {
-        previousMillis = currentMillis; // Update last time the LED was updated
+    unsigned long currentMillisLED = millis();
+    unsigned long currentMillisValue = millis();
+    if (currentMillisValue - previousMillis >= 500) { // Update every 500 milliseconds
+        previousMillis = currentMillisValue;
+        updateDistance();
+    }
+    if (currentMillisLED - previousMillis >= DibsE::blinkDuration) {
+        previousMillis = currentMillisLED; // Update last time the LED was updated
 
         switch (ledState) {
             case 0:
-                simpleBlinkOn(LEDDURATION, 255, 0, 0); // Red
+                simpleBlinkOn(DibsE::blinkDuration, 255, 0, 0); // Red
                 break;
             case 1:
-                simpleBlinkOn(LEDDURATION, 0, 255, 0); // Green
+                simpleBlinkOn(DibsE::blinkDuration, 0, 255, 0); // Green
                 break;
             case 2:
-                simpleBlinkOn(LEDDURATION, 0, 0, 255); // Blue
+                simpleBlinkOn(DibsE::blinkDuration, 0, 0, 255); // Blue
                 break;
+                /*
             case 3:
                 simpleBlinkOff();
-                previousMillis += 500;
+                previousMillis += DibsE::blinkDuration; // TODO check if int is correct, was 500 before
                 break;
+                 */
         }
 
-        ledState = (ledState + 1) % 4; // Cycle through 0, 1, 2, 3
+        ledState = (ledState + 1) % 3; //4; // Cycle through 0, 1, 2, 3
     }
 }
 
-void DibsE::DisplayDistance() {
+void DibsE::SerialPrintDistance() {
     if (distance < 0) {
         Serial.println("Error: ");
         Serial.println(Sonar.ping_result);
@@ -62,12 +69,13 @@ void DibsE::DisplayDistance() {
         Serial.print(distance);
         Serial.println(" cm");
     }
-    // Display the distance on the LED matrix
 }
 
-
 void DibsE::updateDistance() {
-    distance = Sonar.ping_cm();
+    distance = Sonar.ping_cm(); // new distance in cm
+    DibsE::blinkDuration = map(distance, 0, 200, 2000, 100); // map distance to blink duration
+    int v = map(distance, 0, 200, 0, 8);
+    DibsE::matrixValues.newVal(v);
 }
 
 void DibsE::simpleBlinkOn(int duration, int red, int green, int blue) {
@@ -78,4 +86,13 @@ void DibsE::simpleBlinkOn(int duration, int red, int green, int blue) {
 void DibsE::simpleBlinkOff() {
     strip.setPixelColor(0, strip.Color(0, 0, 0));
     strip.show();
+}
+
+void DibsE::DistanceToMatrix() {
+    for (int x = 0; x < 8; x++) { // 8 rows - x Value of Matrix
+        for (int y = 0; y <= matrixValues.getVal(y); y++) { // y Value of Matrix
+            matrix.SetPixel(x, y);
+        }
+    }
+    matrix.UpdateMatrix();
 }

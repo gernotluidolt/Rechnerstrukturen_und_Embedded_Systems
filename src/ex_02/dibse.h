@@ -4,9 +4,8 @@
 #include <Olimex_LED_Matrix_L.h>
 #include "pins_eduardu.h"
 
-
 #include "NewPing.h"
-
+#include "MatrixValues.h"
 
 
 class DibsE {
@@ -16,14 +15,16 @@ public:
     void loop();
     void simpleBlinkOn(int duration, int red, int green, int blue);
     void simpleBlinkOff();
-    void DisplayDistance();
+    void SerialPrintDistance();
+    void DistanceToMatrix();
+    MatrixValues matrixValues;
     int distance;
 private:
     Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, PIN_RGB_LED, NEO_GRB + NEO_KHZ800);
     Olimex_LED_Matrix_L matrix;
     NewPing Sonar;
     void updateDistance();
+    int blinkDuration = 0;
 };
-
 
 #endif //DIBSE_H
