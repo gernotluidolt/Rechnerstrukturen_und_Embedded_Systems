@@ -3,12 +3,12 @@
 
 #define LEDDURATION 500
 
-unsigned long previousMillis = 0;  // Stores last time the LED was updated
+unsigned long previousMillis = 0;  // Stores the last time the LED was updated
 int ledState = 0;                  // LED state to keep track of which color is on
 
 void DibsE::setup() {
     strip.begin();
-    strip.show(); // Initialize all pixels to 'off'
+    strip.show();
 }
 
 void DibsE::loop() {

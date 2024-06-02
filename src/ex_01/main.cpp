@@ -1,3 +1,4 @@
+
 #include "Arduino.h"  // high level functions for Arduino
 #include "bitoperations.h"
 #include "stdint.h" // for uint8_t, uint16_t, etc., int are 2 bytes in Arduino
@@ -29,6 +30,4 @@ void loop() {
     // 1.2 und 1.3 - Testausgabe im seriellen Monitor
     ExcerciseSheet1::solveExercise1_2(PIN_JOYSTICK_X, PIN_JOYSTICK_Y, PIN_JOYSTICK_BUTTON);
     ExcerciseSheet1::solveExercise1_3(PF7, PF6, PIN_JOYSTICK_BUTTON);
-
-
 }

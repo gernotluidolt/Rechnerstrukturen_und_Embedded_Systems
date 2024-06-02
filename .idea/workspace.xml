@@ -14,21 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="init boilerplate">
-      <change afterPath="$PROJECT_DIR$/.idea/Rechnerstrukturen_und_Embedded_Systems.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickHigh.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickHigh.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickLow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/JoystickLow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/dibse.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/dibse.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/excercisesheet1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/excercisesheet1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_01/main.cpp" afterDir="false" />
+    <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="Stand Abgabe ex01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pins_eduardu.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/pins_eduardu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_01/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_01/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +34,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -140,9 +129,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rechnerstrukturen_und_Embedded_Systems" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
@@ -166,7 +155,10 @@
       <workItem from="1716731285834" duration="90000" />
       <workItem from="1716732409281" duration="5628000" />
       <workItem from="1716738338528" duration="644000" />
-      <workItem from="1716746532868" duration="8143000" />
+      <workItem from="1716746532868" duration="8333000" />
+      <workItem from="1716909661414" duration="139000" />
+      <workItem from="1716910525876" duration="530000" />
+      <workItem from="1717058167391" duration="1454000" />
     </task>
     <task id="LOCAL-00001" summary="init boilerplate">
       <option name="closed" value="true" />
@@ -184,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716555998363</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Stand Abgabe ex01">
+      <option name="closed" value="true" />
+      <created>1716755370396</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716755370396</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +212,7 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="init boilerplate" />
-    <option name="LAST_COMMIT_MESSAGE" value="init boilerplate" />
+    <MESSAGE value="Stand Abgabe ex01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stand Abgabe ex01" />
   </component>
 </project>
