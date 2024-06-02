@@ -1,15 +1,15 @@
-#include "Arduino.h"
-#include "DibsE.h"
+#include "dibse.h"
 
-
+int distance;
 DibsE dibse;
 
-void setup() {
+void setup()
+{
+    Serial.begin (115200);
     dibse.setup();
-    dibse.simpleBlinkOn(500, 255, 255, 255);
 }
 
-void loop() {
+void loop()
+{
     dibse.loop();
 }
-

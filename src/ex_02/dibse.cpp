@@ -3,8 +3,21 @@
 
 #define LEDDURATION 500
 
+#define US_TX 8
+#define US_RX 4
+#define MAX_DISTANCE   200
+
+// LED Matrix pins
+#define LED_LATCH 11
+#define LED_DATA 16
+#define LED_CLOCK 15
+
 unsigned long previousMillis = 0;  // Stores the last time the LED was updated
 int ledState = 0;                  // LED state to keep track of which color is on
+
+DibsE::DibsE() : Sonar(US_TX, US_RX, MAX_DISTANCE), matrix(LED_LATCH, LED_CLOCK, LED_DATA) {
+    distance = 0;
+}
 
 void DibsE::setup() {
     strip.begin();
@@ -12,8 +25,11 @@ void DibsE::setup() {
 }
 
 void DibsE::loop() {
-    unsigned long currentMillis = millis();
 
+    updateDistance();
+    DisplayDistance();
+
+    unsigned long currentMillis = millis();
     if (currentMillis - previousMillis >= LEDDURATION) {
         previousMillis = currentMillis; // Update last time the LED was updated
 
@@ -35,6 +51,23 @@ void DibsE::loop() {
 
         ledState = (ledState + 1) % 4; // Cycle through 0, 1, 2, 3
     }
+}
+
+void DibsE::DisplayDistance() {
+    if (distance < 0) {
+        Serial.println("Error: ");
+        Serial.println(Sonar.ping_result);
+    } else {
+        Serial.print("Distance: ");
+        Serial.print(distance);
+        Serial.println(" cm");
+    }
+    // Display the distance on the LED matrix
+}
+
+
+void DibsE::updateDistance() {
+    distance = Sonar.ping_cm();
 }
 
 void DibsE::simpleBlinkOn(int duration, int red, int green, int blue) {
