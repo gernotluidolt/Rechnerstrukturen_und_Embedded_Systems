@@ -1,6 +1,5 @@
 #include "dibse.h"
 
-int distance;
 DibsE dibse;
 
 void setup()

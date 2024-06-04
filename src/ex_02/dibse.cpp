@@ -6,15 +6,12 @@
 #define US_RX 4
 #define MAX_DISTANCE   200
 
-// LED Matrix pins
-#define LED_LATCH 11
-#define LED_DATA 16
-#define LED_CLOCK 15
+LedMatrix DibsE::matrix = LedMatrix(LED_LATCH, LED_DATA, LED_CLOCK);
 
 unsigned long previousMillis = 0;  // Stores the last time the LED was updated
 int ledState = 0;                  // LED state to keep track of which color is on
 
-DibsE::DibsE() : Sonar(US_TX, US_RX, MAX_DISTANCE), matrix(LED_LATCH, LED_CLOCK, LED_DATA) {
+DibsE::DibsE() : Sonar(US_TX, US_RX, MAX_DISTANCE){
     distance = 0;
 }
 
@@ -24,17 +21,18 @@ void DibsE::setup() {
 }
 
 void DibsE::loop() {
+    DistanceToMatrix(); // Update the matrix
+    static unsigned long lastUpdate = 0; // Stores the last time the matrix was updated
 
-    updateDistance();
-    SerialPrintDistance();
-    DistanceToMatrix();
+    unsigned long currentMillis = millis(); // Get the current time
+
+    if (currentMillis - lastUpdate >= 3000) { // Check if 300 milliseconds have passed since the last update
+        lastUpdate = currentMillis; // Update the last update time
+        updateDistance(); // Update the distance
+    }
 
     unsigned long currentMillisLED = millis();
-    unsigned long currentMillisValue = millis();
-    if (currentMillisValue - previousMillis >= 500) { // Update every 500 milliseconds
-        previousMillis = currentMillisValue;
-        updateDistance();
-    }
+
     if (currentMillisLED - previousMillis >= DibsE::blinkDuration) {
         previousMillis = currentMillisLED; // Update last time the LED was updated
 
@@ -48,15 +46,9 @@ void DibsE::loop() {
             case 2:
                 simpleBlinkOn(DibsE::blinkDuration, 0, 0, 255); // Blue
                 break;
-                /*
-            case 3:
-                simpleBlinkOff();
-                previousMillis += DibsE::blinkDuration; // TODO check if int is correct, was 500 before
-                break;
-                 */
         }
 
-        ledState = (ledState + 1) % 3; //4; // Cycle through 0, 1, 2, 3
+        ledState = (ledState + 1) % 3;
     }
 }
 
@@ -73,8 +65,8 @@ void DibsE::SerialPrintDistance() {
 
 void DibsE::updateDistance() {
     distance = Sonar.ping_cm(); // new distance in cm
-    DibsE::blinkDuration = map(distance, 0, 200, 2000, 100); // map distance to blink duration
-    int v = map(distance, 0, 200, 0, 8);
+    DibsE::blinkDuration = map(distance, 0, 200, 50, 500); // map distance to blink duration
+    int v = map(distance, 0, 200, 8, 0);
     DibsE::matrixValues.newVal(v);
 }
 
@@ -89,10 +81,12 @@ void DibsE::simpleBlinkOff() {
 }
 
 void DibsE::DistanceToMatrix() {
-    for (int x = 0; x < 8; x++) { // 8 rows - x Value of Matrix
-        for (int y = 0; y <= matrixValues.getVal(y); y++) { // y Value of Matrix
-            matrix.SetPixel(x, y);
+    matrix.clear();
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < matrixValues.getVal(i); j++) {
+            matrix.drawPixel(i, j, 1);
         }
     }
-    matrix.UpdateMatrix();
+    matrix.update();
 }

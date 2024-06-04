@@ -14,9 +14,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="Stand Abgabe ex01">
+    <list default="true" id="e72fc85e-ef19-427a-bb87-3ab90f6d3ab3" name="Changes" comment="ex02 Aufgabe 2 wip">
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/LedMatrix.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/LedMatrix.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/LedMatrixFont.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/LedMatrixFont.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/examples/MovingTextExample/MovingTextExample.ino" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/examples/SimpleDrawingExample/SimpleDrawingExample.ino" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/LedMatrix/library.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_02/LedMatrix.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_02/LedMatrix.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex_01/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_01/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_02/dibse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_02/dibse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_02/dibse.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_02/dibse.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_02/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_02/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,32 +106,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Makefile Target.ex_01.executor&quot;: &quot;Run&quot;,
-    &quot;PlatformIO.PlatformIO.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/gernot/repos/eduArdu_boilerplate/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Makefile Target.ex_01.executor": "Run",
+    "PlatformIO.PlatformIO.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/gernot/repos/Rechnerstrukturen_und_Embedded_Systems/src/ex_02",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ex_02" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -129,9 +143,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rechnerstrukturen_und_Embedded_Systems" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
@@ -159,6 +173,9 @@
       <workItem from="1716909661414" duration="139000" />
       <workItem from="1716910525876" duration="530000" />
       <workItem from="1717058167391" duration="1454000" />
+      <workItem from="1717317580142" duration="15277000" />
+      <workItem from="1717504434575" duration="13000" />
+      <workItem from="1717504494731" duration="7007000" />
     </task>
     <task id="LOCAL-00001" summary="init boilerplate">
       <option name="closed" value="true" />
@@ -184,7 +201,31 @@
       <option name="project" value="LOCAL" />
       <updated>1716755370396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ex02 Aufgabe 1">
+      <option name="closed" value="true" />
+      <created>1717320290293</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717320290293</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ex02 Aufgabe 2 wip">
+      <option name="closed" value="true" />
+      <created>1717324207583</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717324207583</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ex02 Aufgabe 2 wip">
+      <option name="closed" value="true" />
+      <created>1717348130022</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717348130022</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +254,8 @@
     </ignored-roots>
     <MESSAGE value="init boilerplate" />
     <MESSAGE value="Stand Abgabe ex01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stand Abgabe ex01" />
+    <MESSAGE value="ex02 Aufgabe 1" />
+    <MESSAGE value="ex02 Aufgabe 2 wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="ex02 Aufgabe 2 wip" />
   </component>
 </project>
